@@ -6,6 +6,29 @@ main {
   margin-right: auto;
 }
 
+#head {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#head::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  background-color: red;
+  transition: all 1s;
+}
+
+#head:hover::before {
+  transform: scaleX(1);
+}
+
 #menu {
   display: flex;
   flex-direction: row;
@@ -22,7 +45,7 @@ main {
 
 #sizeFont {
   height: 10px;
-  width: 30%;
+  width: 40px;
 }
 
 .bold {
